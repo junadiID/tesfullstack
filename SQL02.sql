@@ -1,0 +1,1 @@
+SELECT m.* FROM tmatakuliah AS m LEFT JOIN tnilai AS n ON m.KodeMK = n.KodeMK WHERE n.KodeMK IS NULL;

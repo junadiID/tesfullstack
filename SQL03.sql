@@ -1,0 +1,1 @@
+SELECT m.NamaMahasiswa FROM tmahasiswa AS m JOIN tnilai AS n ON m.NIRM = n.NIRM JOIN tmatakuliah AS mk ON n.KodeMK = mk.KodeMK WHERE mk.NamaMataKuliah IN (n.KodeMK != mk.KodeMK) GROUP BY m.NamaMahasiswa HAVING COUNT(DISTINCT mk.NamaMataKuliah) = 2;

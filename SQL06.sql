@@ -1,0 +1,1 @@
+SELECT mk.NamaMataKuliah AS nama_mata_kuliah, COUNT(n.KodeMK) AS jumlah_mahasiswa FROM tnilai AS n JOIN tmatakuliah AS mk ON n.KodeMK = mk.KodeMK GROUP BY mk.NamaMataKuliah ORDER BY jumlah_mahasiswa DESC LIMIT 1;
